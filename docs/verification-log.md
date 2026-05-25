@@ -94,6 +94,57 @@ Copy this block to start a new entry. Date format `YYYY-MM-DD`.
 
 ---
 
+## 2026-05-25 -- First post-release monthly sweep; three package families have upgrades; CI verification required
+
+**Status:** Pending -- NuGet survey complete; three package families have upgrades pending CI verification before pins are bumped. No key available for live-API smoke (§2.2 Anthropic key rotation outstanding).
+
+### Packages (Critical-5 list)
+- [x] `Microsoft.Extensions.AI` -- **10.5.2 → 10.6.0** (minor bump). Hold at 10.5.2 pending CI verification.
+- [x] `Microsoft.Extensions.AI.Abstractions` -- **10.5.2 → 10.6.0**. Hold with family.
+- [x] `Microsoft.Extensions.AI.OpenAI` -- **10.5.2 → 10.6.0**. Hold with family.
+- [x] `Microsoft.Extensions.AI.Evaluation` -- **10.5.0 → 10.6.0** (skips 10.5.1 -- that version never appeared on NuGet, as expected). Evaluation family finally catches up to core. Hold with MEAI family.
+- [x] `Microsoft.Extensions.AI.Evaluation.Quality` -- **10.5.0 → 10.6.0**. Hold with family.
+- [x] `Microsoft.Agents.AI` -- **1.3.0 → 1.6.2** (three minor jumps; 1.4.0, 1.5.0, 1.6.x all landed since 2026-05-09 where 1.5.0 was first observed). Hold at 1.3.0 pending CI verification and changelog review.
+- [x] `Microsoft.Agents.AI.Abstractions` -- **1.3.0 → 1.6.2**. Hold with family.
+- [x] `Microsoft.Agents.AI.OpenAI` -- **1.3.0 → 1.6.2**. Hold with family.
+- [x] `Microsoft.Agents.AI.Workflows` -- **1.3.0 → 1.6.2**. Hold with family.
+- [x] `Microsoft.Agents.AI.Foundry` -- **1.3.0 → 1.5.0** stable (1.6.2-preview.260521.1 on NuGet; behind the family stable ceiling). Hold; bump to 1.5.0 once family CI is green.
+- [x] `Microsoft.Agents.AI.A2A` -- **1.3.0-preview.260423.1 → 1.6.2-preview.260521.1** (preview). Hold with family.
+- [x] `Microsoft.Agents.AI.Hosting` -- **1.3.0-preview.260423.1 → 1.6.2-preview.260521.1** (preview). Hold with family.
+- [x] `A2A.AspNetCore` -- **1.0.0-preview2** confirmed; no change.
+- [x] `ModelContextProtocol` -- **1.2.0 → 1.3.0** (same version observed on 2026-05-09; no further release since). Lowest risk; recommend bumping once CI green.
+- [x] `ModelContextProtocol.Core` -- **1.2.0 → 1.3.0**. Hold with family.
+- [x] `ModelContextProtocol.AspNetCore` -- **1.2.0 → 1.3.0**. Hold with family.
+- [x] `Azure.AI.OpenAI` -- **2.1.0** confirmed; no stable change. `2.9.0-beta.1` preview exists; no action on stable pin.
+- [x] `OpenAI` -- **2.10.0** confirmed; no change.
+- [x] `OllamaSharp` -- **5.4.25** confirmed; no change.
+- [x] `Anthropic.SDK` -- **5.10.0** confirmed; 5.11+ (rebuilt against M.E.AI 10.5+) still not on NuGet. `AnthropicChatClient.cs` shim remains in place.
+
+### Code samples
+- [ ] CI matrix not run in this pass -- required before bumping any of the held versions.
+- [ ] Live-API smoke tests blocked -- §2.2 Anthropic key rotation not yet completed; no key for live smoke.
+
+### URLs
+- [ ] URL audit deferred to next pass.
+
+### Anthropic API surface
+- [ ] Skipped -- no Anthropic API key (§2.2 pending).
+
+### Issues found / actions taken
+- No pins changed in this pass. Three upgrade paths queued:
+    1. **MEAI family 10.5.2 → 10.6.0** (+ Evaluation 10.5.0 → 10.6.0): minor bump. Run CI; if green, bump all five packages together and update `version-matrix.md`.
+    2. **Microsoft.Agents.AI family 1.3.0 → 1.6.2**: three minor jumps since last pin; review changelog for breaking changes before bumping. Note: `Foundry` trails at 1.5.0 stable; bump it to 1.5.0 and preview packages (A2A, Hosting) to `1.6.2-preview.260521.1`. Remainder of family to 1.6.2.
+    3. **ModelContextProtocol family 1.2.0 → 1.3.0**: was already held from 2026-05-09; no further release since; safest bump.
+
+### Next-pass to-dos
+- [ ] Run CI against proposed bumps (MEAI 10.6.0, Agents.AI 1.6.2, MCP 1.3.0). If green, update `Directory.Packages.props` and `docs/version-matrix.md` together per family.
+- [ ] Rotate Anthropic API key (§2.2) -- user action at <https://console.anthropic.com/>; unblocks live-API smoke.
+- [ ] Once CI green and key rotated: run live-API smoke (workflow_dispatch) to confirm all three Claude model IDs still callable.
+- [ ] Create `docs/errata.md` in companion repo (§5 post-print follow-up).
+- [ ] Set up weekly CI schedule for live-API smoke (§5 post-print follow-up).
+
+---
+
 ## 2026-05-09 -- Pre-print weekly sweep; MEAI patch bump to 10.5.2; manuscript quality fixes; live-API smoke green
 
 **Status:** **Green** -- all builds pass, all 3 Claude model IDs confirmed callable against live API via CI secret, manuscript quality issues fixed.
