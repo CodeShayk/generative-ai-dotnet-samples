@@ -1,16 +1,23 @@
-# From Problems to Patterns: Generative AI in .NET -- Companion Code
-> Build Next-Level AI Applications, Agents, and Tools with Microsoft's Modern Ecosystem
+# Companion Code Repository
+
 <a href="https://www.amazon.co.uk/gp/product/B0H1718649">
   <img src="images/Gen-AI-eBook-Cover.jpg" alt="Generative AI in .NET" width="250" align="right" />
 </a>
 
+**From Problems to Patterns — Generative AI in .NET**
+*By Najaf A. Shaikh · First Edition, 2026*
+> Build Next-Level AI Applications, Agents, and Tools with Microsoft's Modern Ecosystem
+
 [![CI](https://github.com/CodeShayk/generative-ai-dotnet-samples/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/CodeShayk/generative-ai-dotnet-samples/actions/workflows/ci.yml)
 
-Runnable code samples for **Generative AI in .NET** by Najaf A. Shaikh.
+---
+## Overview
 
-Every sample in this repo corresponds to a section of the printed book. The full book-to-code map lives in [`docs/citation-index.md`](docs/citation-index.md). When the book condenses a section in favor of pointing here, the manuscript cites a **tag** (e.g. `v1.0-first-print`) so the cited code matches the print run -- `master` will drift as the surrounding APIs evolve.
+**Runnable code samples** - Every sample code in this repo corresponds to a section of the printed book. The full book-to-code map lives in [`docs/citation-index.md`](docs/citation-index.md). When the book condenses a section in favor of pointing here, the manuscript cites a **tag** (e.g. `v1.0-first-print`) so the cited code matches the print run -- `master` will drift as the surrounding APIs evolve.
 
 > **About this code.** These are **teaching samples**, not production-grade libraries. They are written for clarity over coverage: each sample demonstrates a single technique, with error handling, retry, observability, and configuration shown to a useful depth rather than exhaustively. Patterns covered -- prompt caching, resilience, evaluation, model routing, output guards, MCP transports -- are real and copy-pasteable, but hardening, threat-modeling, and cost-bounding them for your environment is your responsibility.
+
+---
 
 ## Layout
 
