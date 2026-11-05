@@ -14,7 +14,7 @@
     <PackageReference Include="Anthropic.SDK" />
     <!--
       Anthropic.SDK 5.10.0 was compiled against Microsoft.Extensions.AI.Abstractions 10.3.0.
-      The repo's central pin has since moved to 10.10.0 (required by Microsoft.Agents.AI 1.22),
+      The repo's central pin has since moved to 10.11.0 (Microsoft.Agents.AI 1.27 requires 10.10.1+),
       and HostedMcpServerTool has dropped the AuthorizationToken property and the
       AuthorizationHeaderName field entirely, which causes a runtime MissingMethodException.
       Pin this throwaway harness to the SDK's compile-time targets via VersionOverride.
