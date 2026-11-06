@@ -29,5 +29,5 @@ For new deployments, the manuscript recommends streamable HTTP over SSE -- this 
 
 ## Prerequisites
 
-- .NET 9 SDK
+- .NET 10 SDK
 - `ModelContextProtocol` packages (resolved through the central `Directory.Packages.props`).

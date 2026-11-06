@@ -17,4 +17,4 @@ dotnet run --project samples/ch02-extensions-ai/02.1-console-chat-loop
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `phi4-mini`.
+- .NET 10 SDK, Ollama with `phi4-mini`.

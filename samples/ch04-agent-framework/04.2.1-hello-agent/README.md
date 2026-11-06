@@ -18,4 +18,4 @@ dotnet run --project samples/ch04-agent-framework/04.2.1-hello-agent
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `phi4-mini`.
+- .NET 10 SDK, Ollama with `phi4-mini`.

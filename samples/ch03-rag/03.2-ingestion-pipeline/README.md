@@ -17,4 +17,4 @@ dotnet run --project samples/ch03-rag/03.2-ingestion-pipeline
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `nomic-embed-text`.
+- .NET 10 SDK, Ollama with `nomic-embed-text`.

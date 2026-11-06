@@ -25,4 +25,4 @@ dotnet run --project samples/ch06-production/06.1-observability
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `phi4-mini`.
+- .NET 10 SDK, Ollama with `phi4-mini`.

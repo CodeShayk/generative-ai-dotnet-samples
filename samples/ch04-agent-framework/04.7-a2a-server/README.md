@@ -28,4 +28,4 @@ Pair this with `A2AAgent.ConnectAsync(...)` from a separate program -- see Chapt
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `phi4-mini`.
+- .NET 10 SDK, Ollama with `phi4-mini`.

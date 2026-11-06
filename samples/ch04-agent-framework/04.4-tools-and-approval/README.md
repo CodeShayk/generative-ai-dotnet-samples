@@ -20,4 +20,4 @@ dotnet run --project samples/ch04-agent-framework/04.4-tools-and-approval
 
 ## Prerequisites
 
-- .NET 9 SDK and an OpenAI API key.
+- .NET 10 SDK and an OpenAI API key.

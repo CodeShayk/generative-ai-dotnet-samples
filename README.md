@@ -25,7 +25,7 @@
 generative-ai-dotnet-samples/
 ├── AI in .Net.sln                              -- solution covering every sample + tests
 ├── Directory.Packages.props                    -- centralized NuGet versions
-├── global.json                                 -- .NET 9 SDK pin
+├── global.json                                 -- .NET 10 SDK pin
 ├── LICENSE                                     -- MIT
 ├── docs/
 │   ├── citation-index.md                       -- book-section -> sample-path map
@@ -82,7 +82,7 @@ generative-ai-dotnet-samples/
 
 ## Prerequisites
 
-- **.NET 9 SDK** (`dotnet --version` should be 9.0.x).
+- **.NET 10 SDK** (`dotnet --version` should be 10.0.x). The printed book targets .NET 9; to follow the code exactly as printed, check out the `v1.0-first-print` tag and use a .NET 9 SDK.
 - **Provider credentials** for samples that hit a live model -- each sample's README names exactly which it needs:
   - `OPENAI_API_KEY` for OpenAI / GitHub Models samples.
   - `AZURE_OPENAI_ENDPOINT` + `AZURE_OPENAI_KEY` for Azure OpenAI samples.
@@ -164,7 +164,7 @@ CI catches build-level drift but not all runtime regressions. For the model-ID s
 |---|---|
 | `v1.0-first-print` | Code as it appears in the first print run of the book. |
 | `v1.x-second-print` | Updated for any subsequent print revisions (placeholder; not yet cut). |
-| `master` | Always-current; tracks latest stable .NET 9 + Microsoft.Extensions.AI. May drift from any specific print run. |
+| `master` | Always-current; tracks latest LTS .NET (currently .NET 10) + Microsoft.Extensions.AI. May drift from any specific print run. |
 
 Use a **tag** in any URL you cite from the book -- never `master`.
 

@@ -18,4 +18,4 @@ dotnet run --project samples/ch02-extensions-ai/02.2-structured-output
 
 ## Prerequisites
 
-- .NET 9 SDK and an OpenAI API key (any provider that supports JSON mode works -- see the OpenAI / Azure OpenAI / Anthropic notes in the manuscript).
+- .NET 10 SDK and an OpenAI API key (any provider that supports JSON mode works -- see the OpenAI / Azure OpenAI / Anthropic notes in the manuscript).

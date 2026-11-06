@@ -37,6 +37,6 @@ The book calls out that you should NOT do `services.AddSingleton<AIAgent>(async 
 
 ## Prerequisites
 
-- .NET 9 SDK
+- .NET 10 SDK
 - An OpenAI API key (or any `IChatClient` provider you wire up).
 - One or more reachable MCP servers (the sample's defaults are placeholders -- substitute real ones).

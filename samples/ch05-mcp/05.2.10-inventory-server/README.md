@@ -32,4 +32,4 @@ Then connect any MCP client -- the `samples/ch05-mcp/cached-mcp-tool-provider/` 
 
 ## Prerequisites
 
-- .NET 9 SDK.
+- .NET 10 SDK.

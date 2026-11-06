@@ -22,7 +22,7 @@ Override the model with `ANTHROPIC_MODEL` (defaults to `claude-haiku-4-5-2025100
 
 ## Prerequisites
 
-- .NET 9 SDK and an Anthropic API key.
+- .NET 10 SDK and an Anthropic API key.
 
 ## Verifying model IDs are still callable
 

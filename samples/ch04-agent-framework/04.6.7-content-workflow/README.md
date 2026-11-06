@@ -18,4 +18,4 @@ dotnet run --project samples/ch04-agent-framework/04.6.7-content-workflow
 
 ## Prerequisites
 
-- .NET 9 SDK and an OpenAI API key.
+- .NET 10 SDK and an OpenAI API key.

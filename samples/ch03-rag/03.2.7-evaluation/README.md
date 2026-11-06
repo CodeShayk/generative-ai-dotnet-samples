@@ -22,4 +22,4 @@ dotnet run --project samples/ch03-rag/03.2.7-evaluation
 
 ## Prerequisites
 
-- .NET 9 SDK and an OpenAI API key (or any `IChatClient` provider).
+- .NET 10 SDK and an OpenAI API key (or any `IChatClient` provider).

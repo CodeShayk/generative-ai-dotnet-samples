@@ -26,4 +26,4 @@ The output masks every value so you can demonstrate secret resolution in a scree
 
 ## Prerequisites
 
-- .NET 9 SDK.
+- .NET 10 SDK.

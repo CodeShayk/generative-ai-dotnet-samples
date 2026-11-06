@@ -24,4 +24,4 @@ dotnet run --project samples/ch02-extensions-ai/02.3-function-calling
 
 ## Prerequisites
 
-- .NET 9 SDK and an OpenAI API key.
+- .NET 10 SDK and an OpenAI API key.
