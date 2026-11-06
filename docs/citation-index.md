@@ -44,6 +44,7 @@ When the manuscript condenses a section and points at this repo, the citation sh
 | 4.4.2 -- 4.4.3 | Tools + approval gate | [`samples/ch04-agent-framework/04.4-tools-and-approval/`](../samples/ch04-agent-framework/04.4-tools-and-approval/) |
 | 4.5.1 -- 4.5.4 | Custom agent run middleware | [`samples/ch04-agent-framework/04.5-agent-middleware/`](../samples/ch04-agent-framework/04.5-agent-middleware/) |
 | 4.6.3 | Text-processing workflow | [`samples/ch04-agent-framework/04.6.3-text-processing-walkthrough/`](../samples/ch04-agent-framework/04.6.3-text-processing-walkthrough/) |
+| 4.6.6 | Checkpointing and human approval (added after the first print, so not at the `v1.0-first-print` tag) | [`samples/ch04-agent-framework/04.6.6-checkpointing-approval/`](../samples/ch04-agent-framework/04.6.6-checkpointing-approval/) |
 | 4.6.7 | Multi-agent content workflow | [`samples/ch04-agent-framework/04.6.7-content-workflow/`](../samples/ch04-agent-framework/04.6.7-content-workflow/) |
 | 4.7.3 | Expose an agent over A2A | [`samples/ch04-agent-framework/04.7-a2a-server/`](../samples/ch04-agent-framework/04.7-a2a-server/) |
 | 4.8.3 | Agent with mixed local + MCP tools | [`samples/ch04-agent-framework/04.8-agent-with-mcp/`](../samples/ch04-agent-framework/04.8-agent-with-mcp/) |

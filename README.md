@@ -59,6 +59,7 @@ generative-ai-dotnet-samples/
     │   ├── 04.4-tools-and-approval/            -- Function tools + RequiresApproval marker
     │   ├── 04.5-agent-middleware/              -- Custom run-middleware
     │   ├── 04.6.3-text-processing-walkthrough/ -- Linear workflow walkthrough
+    │   ├── 04.6.6-checkpointing-approval/      -- Pause for approval, checkpoint to disk, resume (added after print)
     │   ├── 04.6.7-content-workflow/            -- Researcher / Writer / Editor multi-agent
     │   ├── 04.7-a2a-server/                    -- Expose an agent via A2A protocol
     │   └── 04.8-agent-with-mcp/                -- Agent with mixed local + MCP tools
@@ -130,6 +131,8 @@ These samples need **only** Ollama (no API keys, no cloud calls):
 - `ch04/04.2.1-hello-agent`, `04.3-persistent-session`, `04.5-agent-middleware`, `04.7-a2a-server`
 - `ch05/*` (all MCP samples; `05.4-mcp-client` needs a server to talk to)
 - `ch06/06.1-observability`, `06.2.1-resilience`, `06.5.1-unit-testing`, `output-guard-chat-client`
+
+`ch04/04.6.3-text-processing-walkthrough` and `04.6.6-checkpointing-approval` need no model at all.
 
 The rest assume an OpenAI / Anthropic / Azure OpenAI key.
 
