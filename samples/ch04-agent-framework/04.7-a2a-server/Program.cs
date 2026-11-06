@@ -45,7 +45,7 @@ internal sealed class AIAgentHandler(AIAgent agent) : IAgentHandler
         AgentResponse response = await agent.RunAsync(input, session, cancellationToken: cancellationToken);
 
         var responder = new MessageResponder(eventQueue, context.ContextId);
-        await responder.ReplyAsync(response.ToString(), cancellationToken);
+        await responder.ReplyAsync(response.ToString(), cancellationToken: cancellationToken);
     }
 
     public Task CancelAsync(RequestContext context, AgentEventQueue eventQueue, CancellationToken cancellationToken)
