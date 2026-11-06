@@ -180,7 +180,7 @@ Before opening a PR: run `dotnet build` from the repo root and confirm the affec
 
 ## Errata
 
-Open an issue at [github.com/CodeShayk/generative-ai-dotnet-samples](https://github.com/CodeShayk/generative-ai-dotnet-samples/issues). Confirmed errata roll into the next print tag and are noted in the parent book's errata page.
+Known corrections and post-print updates are listed in [`docs/errata.md`](docs/errata.md). To report a new one, open an issue at [github.com/CodeShayk/generative-ai-dotnet-samples](https://github.com/CodeShayk/generative-ai-dotnet-samples/issues). Confirmed errata roll into the next print tag.
 
 ## License
 
