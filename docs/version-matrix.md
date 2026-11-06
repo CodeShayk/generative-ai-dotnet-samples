@@ -37,7 +37,7 @@ Mirrors the package matrix in `Appendix-C-Provider-Support-Matrix.md` and `Appen
 | `ModelContextProtocol.Core` | 2.3.1 | Stable |
 | `ModelContextProtocol.AspNetCore` | 2.3.1 | Stable |
 
-> **Major-version note.** The MCP C# SDK moved 1.x → 2.x after the first print. The Chapter 5 samples build unchanged against 2.3.1, but `Appendix-A-Package-Reference.md` describes the `1.2.x` packages as printed. Treat this table as authoritative for current builds.
+> **Major-version note.** The MCP C# SDK moved 1.x → 2.x after the first print. The samples that create an MCP client now set `DiscoverProbeTimeout` to avoid an intermittent connection failure (see [`errata.md`](errata.md#mcp-2x-new-handshake-and-an-intermittent-connection-failure)). `Appendix-A-Package-Reference.md` describes the `1.2.x` packages as printed. Treat this table as authoritative for current builds.
 
 ## Provider SDKs
 

@@ -28,7 +28,13 @@ IClientTransport transport = args[0].ToLowerInvariant() switch
     _ => throw new InvalidOperationException("First arg must be 'stdio' or 'http'.")
 };
 
-await using var client = await McpClient.CreateAsync(transport);
+// By default an MCP 2.x client gives up on its server/discover probe after 5 seconds
+// and sends initialize on the same connection. A server still starting up (dotnet run,
+// dnx) can then read both requests and reject initialize, so wait for the probe's answer.
+// Older servers still work: they answer that the method is unknown, and the client falls back.
+await using var client = await McpClient.CreateAsync(
+    transport,
+    new McpClientOptions { DiscoverProbeTimeout = Timeout.InfiniteTimeSpan });
 
 Console.WriteLine($"Connected. Server: {client.ServerInfo?.Name ?? "(unknown)"}");
 Console.WriteLine();

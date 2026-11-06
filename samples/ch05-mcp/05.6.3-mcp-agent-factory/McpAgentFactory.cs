@@ -36,7 +36,12 @@ public sealed class McpAgentFactory(
             try
             {
                 IClientTransport transport = BuildTransport(server);
-                McpClient client = await McpClient.CreateAsync(transport, cancellationToken: ct);
+                // Wait for the server/discover probe's answer so a slow-starting server does
+                // not see the initialize fallback as well. See 05.4-mcp-client for the details.
+                McpClient client = await McpClient.CreateAsync(
+                    transport,
+                    new McpClientOptions { DiscoverProbeTimeout = Timeout.InfiniteTimeSpan },
+                    cancellationToken: ct);
                 _clients.Add(client);
 
                 IList<McpClientTool> serverTools = await client.ListToolsAsync(cancellationToken: ct);
