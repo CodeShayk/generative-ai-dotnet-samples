@@ -37,7 +37,7 @@ Mirrors the package matrix in `Appendix-C-Provider-Support-Matrix.md` and `Appen
 | `ModelContextProtocol.Core` | 2.3.1 | Stable |
 | `ModelContextProtocol.AspNetCore` | 2.3.1 | Stable |
 
-> **Major-version note.** The MCP C# SDK moved 1.x → 2.x after the first print. The samples that create an MCP client now set `DiscoverProbeTimeout` to avoid an intermittent connection failure (see [`errata.md`](errata.md#mcp-2x-new-handshake-and-an-intermittent-connection-failure)). `Appendix-A-Package-Reference.md` describes the `1.2.x` packages as printed. Treat this table as authoritative for current builds.
+> **Major-version note.** The MCP C# SDK moved 1.x → 2.x after the first print. The samples that create an MCP client now set `DiscoverProbeTimeout` to avoid an intermittent connection failure (see [`errata.md`](errata.md#mcp-2x-new-handshake-and-an-intermittent-connection-failure)). The upstream fix ([csharp-sdk#1956](https://github.com/modelcontextprotocol/csharp-sdk/pull/1956)) is not in 2.3.1. When a sweep moves past 2.3.1, check whether that release includes it, and retest before removing the setting. `Appendix-A-Package-Reference.md` describes the `1.2.x` packages as printed. Treat this table as authoritative for current builds.
 
 ## Provider SDKs
 

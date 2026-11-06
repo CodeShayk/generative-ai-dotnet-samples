@@ -32,6 +32,7 @@ IClientTransport transport = args[0].ToLowerInvariant() switch
 // and sends initialize on the same connection. A server still starting up (dotnet run,
 // dnx) can then read both requests and reject initialize, so wait for the probe's answer.
 // Older servers still work: they answer that the method is unknown, and the client falls back.
+// Tracked upstream as modelcontextprotocol/csharp-sdk#1954; the fix is not in 2.3.1.
 await using var client = await McpClient.CreateAsync(
     transport,
     new McpClientOptions { DiscoverProbeTimeout = Timeout.InfiniteTimeSpan });
