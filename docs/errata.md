@@ -64,7 +64,7 @@ The sentence before it should say that you stream these events from `InProcessEx
 
 ### Sections 4.6.2, 4.6.5 and 4.7.4: using an agent as an executor
 
-`AIAgent` has no `.AsExecutor()` method. An `AIAgent` converts implicitly to an `ExecutorBinding`, so you can pass it directly to the workflow builder:
+`AIAgent` has no `.AsExecutor()` method, and `WorkflowBuilder` has no `AddExecutor` method. An `AIAgent` converts implicitly to an `ExecutorBinding`, so you can pass it directly to the workflow builder:
 
 ```csharp
 ExecutorBinding writer = writerAgent;
@@ -75,7 +75,7 @@ To run several agents in sequence, you can also use `AgentWorkflowBuilder.BuildS
 
 ### Section 4.6.6: checkpointing and human approval
 
-The concepts in this section are sound, but the code in it, including the worked approval example, does not compile. The compiler rejects each of the names in the left column of this table. The right column shows what to use instead.
+The concepts in this section are sound, but the code in it, including the worked approval example, does not compile, because the APIs in the left column of this table do not exist. The right column shows what to use instead.
 
 | As printed | Use instead |
 |---|---|
@@ -87,7 +87,7 @@ The concepts in this section are sound, but the code in it, including the worked
 | `context.EmitEventAsync(new WorkflowEvent(name, data))` (also in 4.6.2) | `context.AddEventAsync(...)` with your own `WorkflowEvent` subclass |
 | `ICheckpointable`, `Checkpoint()`, `Restore()` | Override `OnCheckpointingAsync` and `OnCheckpointRestoredAsync` on the executor |
 
-These replacements have been checked by name, but no complete, tested checkpointing example has been published yet. Treat this table as a guide rather than a drop-in fix.
+The replacement APIs compile on both versions, but no complete, tested checkpointing example has been published yet. Treat this table as a guide rather than a drop-in fix.
 
 ### Section 5.1.3: SDK stability
 
@@ -124,6 +124,16 @@ await using (var run = await InProcessExecution.RunAsync(workflow, "Hello, agent
     }
 }
 ```
+
+### Sample `05.6.3-mcp-agent-factory` ignores `OPENAI_API_KEY` at the print tag
+
+If you set `OPENAI_API_KEY` as the sample's README says, it still crashes on startup with:
+
+```text
+System.ArgumentException: Value cannot be an empty string. (Parameter 'key')
+```
+
+The sample's `appsettings.json` contains `"ApiKey": ""`, and that empty value takes priority over the environment variable. It is fixed on `master`. To fix your own copy, delete that line from `appsettings.json`.
 
 ## Updates since print
 
