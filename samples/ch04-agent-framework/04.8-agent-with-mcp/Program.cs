@@ -20,7 +20,11 @@ var transport = new StdioClientTransport(new StdioClientTransportOptions
     Arguments = args.Skip(1).ToArray(),
 });
 
-await using var mcp = await McpClient.CreateAsync(transport);
+// Wait for the server/discover probe's answer so a slow-starting server does not see
+// the initialize fallback as well. See 05.4-mcp-client for the full explanation.
+await using var mcp = await McpClient.CreateAsync(
+    transport,
+    new McpClientOptions { DiscoverProbeTimeout = Timeout.InfiniteTimeSpan });
 IList<McpClientTool> mcpTools = await mcp.ListToolsAsync();
 
 // Mix one local C# tool with all the MCP-sourced tools (McpClientTool : AIFunction : AITool).

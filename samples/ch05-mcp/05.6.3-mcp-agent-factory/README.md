@@ -15,7 +15,7 @@ A configuration-driven factory that connects an `AIAgent` to one or more MCP ser
 ## Run it
 
 ```bash
-# Set your OpenAI key (or edit appsettings.json -- but don't commit secrets).
+# Set your OpenAI key (or add OpenAI:ApiKey to appsettings.json -- but don't commit secrets).
 export OPENAI_API_KEY=sk-...
 
 dotnet run --project samples/ch05-mcp/05.6.3-mcp-agent-factory
@@ -37,6 +37,6 @@ The book calls out that you should NOT do `services.AddSingleton<AIAgent>(async 
 
 ## Prerequisites
 
-- .NET 9 SDK
+- .NET 10 SDK
 - An OpenAI API key (or any `IChatClient` provider you wire up).
 - One or more reachable MCP servers (the sample's defaults are placeholders -- substitute real ones).

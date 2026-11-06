@@ -28,4 +28,4 @@ Streaming events:
 
 ## Prerequisites
 
-- .NET 9 SDK
+- .NET 10 SDK

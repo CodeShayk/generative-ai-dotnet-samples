@@ -21,4 +21,4 @@ The first run creates a `knowledge.txt` with sample policies. Edit it -- and the
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `phi4-mini` and `nomic-embed-text`.
+- .NET 10 SDK, Ollama with `phi4-mini` and `nomic-embed-text`.

@@ -20,4 +20,4 @@ Try: `wireless earbuds for running`, `cheap mouse`, `comfy mechanical keyboard`.
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `nomic-embed-text`.
+- .NET 10 SDK, Ollama with `nomic-embed-text`.

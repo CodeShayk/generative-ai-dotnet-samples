@@ -20,4 +20,4 @@ You should see the second request return in milliseconds and the third request g
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `phi4-mini`.
+- .NET 10 SDK, Ollama with `phi4-mini`.

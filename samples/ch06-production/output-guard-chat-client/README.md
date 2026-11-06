@@ -34,4 +34,4 @@ The demo uses a scripted `StubChatClient` so it runs offline. In production you 
 
 ## Prerequisites
 
-- .NET 9 SDK
+- .NET 10 SDK

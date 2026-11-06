@@ -32,6 +32,6 @@ dotnet run --project samples/ch01-foundations/01.3-hello-chat -- github
 
 ## Prerequisites
 
-- .NET 9 SDK.
+- .NET 10 SDK.
 - Optional: Ollama running locally with `phi4-mini` pulled (`ollama pull phi4-mini`).
 - Optional: `OPENAI_API_KEY` or `GITHUB_TOKEN` for cloud providers.

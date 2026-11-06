@@ -22,4 +22,4 @@ dotnet test samples/ch06-production/06.5.1-unit-testing
 
 ## Prerequisites
 
-- .NET 9 SDK.
+- .NET 10 SDK.

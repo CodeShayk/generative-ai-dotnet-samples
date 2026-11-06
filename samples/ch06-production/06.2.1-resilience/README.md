@@ -24,4 +24,4 @@ Status: OK (after 3 HTTP attempt(s))
 
 ## Prerequisites
 
-- .NET 9 SDK.
+- .NET 10 SDK.

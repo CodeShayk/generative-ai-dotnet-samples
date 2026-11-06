@@ -25,4 +25,4 @@ dotnet run --project samples/ch04-agent-framework/04.3-persistent-session
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `phi4-mini`.
+- .NET 10 SDK, Ollama with `phi4-mini`.

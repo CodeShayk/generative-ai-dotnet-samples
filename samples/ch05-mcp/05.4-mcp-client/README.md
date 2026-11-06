@@ -28,4 +28,4 @@ Then at the `>` prompt:
 
 ## Prerequisites
 
-- .NET 9 SDK; an MCP server reachable over stdio or HTTP.
+- .NET 10 SDK; an MCP server reachable over stdio or HTTP.

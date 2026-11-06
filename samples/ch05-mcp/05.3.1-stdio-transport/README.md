@@ -20,4 +20,4 @@ dotnet build samples/ch05-mcp/05.3.1-stdio-transport
 
 ## Prerequisites
 
-- .NET 9 SDK.
+- .NET 10 SDK.

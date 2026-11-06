@@ -28,5 +28,5 @@ Vector dimensions: 768
 
 ## Prerequisites
 
-- .NET 9 SDK.
+- .NET 10 SDK.
 - Ollama with the `nomic-embed-text` model pulled.

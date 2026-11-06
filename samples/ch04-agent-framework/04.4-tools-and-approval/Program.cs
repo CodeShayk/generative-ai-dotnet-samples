@@ -40,8 +40,8 @@ static string DeleteCustomerProtected([Description("Customer ID")] int id)
     => $"Customer {id} permanently deleted.";
 
 
-// Marker attribute. A real production app would have a function-invocation
-// middleware that checks for this and emits FunctionApprovalRequest events
-// before invoking the underlying delegate.
+// Marker attribute only: nothing enforces it in this sample. To require approval in a real
+// app, wrap the tool in ApprovalRequiredAIFunction and handle ToolApprovalRequestContent
+// (see docs/errata.md, section 4.4.3).
 [AttributeUsage(AttributeTargets.Method)]
 internal sealed class RequiresApprovalAttribute : Attribute { }

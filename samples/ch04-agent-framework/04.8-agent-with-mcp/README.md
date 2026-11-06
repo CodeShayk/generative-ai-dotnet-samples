@@ -20,4 +20,4 @@ Or point it at any other stdio MCP server.
 
 ## Prerequisites
 
-- .NET 9 SDK, an OpenAI API key, and an MCP server you can spawn over stdio.
+- .NET 10 SDK, an OpenAI API key, and an MCP server you can spawn over stdio.

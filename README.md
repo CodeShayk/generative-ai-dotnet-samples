@@ -25,7 +25,7 @@
 generative-ai-dotnet-samples/
 ├── AI in .Net.sln                              -- solution covering every sample + tests
 ├── Directory.Packages.props                    -- centralized NuGet versions
-├── global.json                                 -- .NET 9 SDK pin
+├── global.json                                 -- .NET 10 SDK pin
 ├── LICENSE                                     -- MIT
 ├── docs/
 │   ├── citation-index.md                       -- book-section -> sample-path map
@@ -59,6 +59,7 @@ generative-ai-dotnet-samples/
     │   ├── 04.4-tools-and-approval/            -- Function tools + RequiresApproval marker
     │   ├── 04.5-agent-middleware/              -- Custom run-middleware
     │   ├── 04.6.3-text-processing-walkthrough/ -- Linear workflow walkthrough
+    │   ├── 04.6.6-checkpointing-approval/      -- Pause for approval, checkpoint to disk, resume (added after print)
     │   ├── 04.6.7-content-workflow/            -- Researcher / Writer / Editor multi-agent
     │   ├── 04.7-a2a-server/                    -- Expose an agent via A2A protocol
     │   └── 04.8-agent-with-mcp/                -- Agent with mixed local + MCP tools
@@ -82,7 +83,7 @@ generative-ai-dotnet-samples/
 
 ## Prerequisites
 
-- **.NET 9 SDK** (`dotnet --version` should be 9.0.x).
+- **.NET 10 SDK** (`dotnet --version` should be 10.0.x). The printed book targets .NET 9; to follow the code exactly as printed, check out the `v1.0-first-print` tag and use a .NET 9 SDK.
 - **Provider credentials** for samples that hit a live model -- each sample's README names exactly which it needs:
   - `OPENAI_API_KEY` for OpenAI / GitHub Models samples.
   - `AZURE_OPENAI_ENDPOINT` + `AZURE_OPENAI_KEY` for Azure OpenAI samples.
@@ -131,6 +132,8 @@ These samples need **only** Ollama (no API keys, no cloud calls):
 - `ch05/*` (all MCP samples; `05.4-mcp-client` needs a server to talk to)
 - `ch06/06.1-observability`, `06.2.1-resilience`, `06.5.1-unit-testing`, `output-guard-chat-client`
 
+`ch04/04.6.3-text-processing-walkthrough` and `04.6.6-checkpointing-approval` need no model at all.
+
 The rest assume an OpenAI / Anthropic / Azure OpenAI key.
 
 ## Cost expectations
@@ -164,7 +167,7 @@ CI catches build-level drift but not all runtime regressions. For the model-ID s
 |---|---|
 | `v1.0-first-print` | Code as it appears in the first print run of the book. |
 | `v1.x-second-print` | Updated for any subsequent print revisions (placeholder; not yet cut). |
-| `master` | Always-current; tracks latest stable .NET 9 + Microsoft.Extensions.AI. May drift from any specific print run. |
+| `master` | Always-current; tracks latest LTS .NET (currently .NET 10) + Microsoft.Extensions.AI. May drift from any specific print run. |
 
 Use a **tag** in any URL you cite from the book -- never `master`.
 
@@ -180,7 +183,7 @@ Before opening a PR: run `dotnet build` from the repo root and confirm the affec
 
 ## Errata
 
-Open an issue at [github.com/CodeShayk/generative-ai-dotnet-samples](https://github.com/CodeShayk/generative-ai-dotnet-samples/issues). Confirmed errata roll into the next print tag and are noted in the parent book's errata page.
+Known corrections and post-print updates are listed in [`docs/errata.md`](docs/errata.md). To report a new one, open an issue at [github.com/CodeShayk/generative-ai-dotnet-samples](https://github.com/CodeShayk/generative-ai-dotnet-samples/issues). Confirmed errata roll into the next print tag.
 
 ## License
 

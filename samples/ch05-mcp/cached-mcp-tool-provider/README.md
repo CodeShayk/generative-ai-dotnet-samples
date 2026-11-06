@@ -34,5 +34,5 @@ Second call -- served from cache.
 
 ## Prerequisites
 
-- .NET 9 SDK
+- .NET 10 SDK
 - An MCP server you can spawn over stdio (Azure MCP, the `05.3.2-sse-transport` sample's HTTP version, etc.)

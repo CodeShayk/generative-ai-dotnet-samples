@@ -18,4 +18,4 @@ dotnet run --project samples/ch03-rag/03.3-vision-extract -- /path/to/receipt.jp
 
 ## Prerequisites
 
-- .NET 9 SDK and an OpenAI API key (or any vision-capable `IChatClient` provider).
+- .NET 10 SDK and an OpenAI API key (or any vision-capable `IChatClient` provider).

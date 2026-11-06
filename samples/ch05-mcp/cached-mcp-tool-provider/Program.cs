@@ -14,7 +14,11 @@ var transport = new StdioClientTransport(new StdioClientTransportOptions
     Arguments = args.Skip(1).ToArray(),
 });
 
-await using var client = await McpClient.CreateAsync(transport);
+// Wait for the server/discover probe's answer so a slow-starting server does not see
+// the initialize fallback as well. See 05.4-mcp-client for the full explanation.
+await using var client = await McpClient.CreateAsync(
+    transport,
+    new McpClientOptions { DiscoverProbeTimeout = Timeout.InfiniteTimeSpan });
 await using var provider = new CachedMcpToolProvider(client);
 
 Console.WriteLine("First call -- fetches and caches:");

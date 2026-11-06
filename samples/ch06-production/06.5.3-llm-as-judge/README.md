@@ -20,4 +20,4 @@ dotnet run --project samples/ch06-production/06.5.3-llm-as-judge
 
 ## Prerequisites
 
-- .NET 9 SDK and an OpenAI API key.
+- .NET 10 SDK and an OpenAI API key.

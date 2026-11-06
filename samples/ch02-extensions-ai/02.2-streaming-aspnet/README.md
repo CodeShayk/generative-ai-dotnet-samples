@@ -19,4 +19,4 @@ Open http://localhost:5181/, click **Send**, and watch the tokens stream in.
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `phi4-mini`.
+- .NET 10 SDK, Ollama with `phi4-mini`.

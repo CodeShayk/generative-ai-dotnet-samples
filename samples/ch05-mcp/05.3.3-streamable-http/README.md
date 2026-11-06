@@ -19,4 +19,4 @@ The server listens on `http://localhost:5183`. Pair with `StreamableHttpClientTr
 
 ## Prerequisites
 
-- .NET 9 SDK.
+- .NET 10 SDK.

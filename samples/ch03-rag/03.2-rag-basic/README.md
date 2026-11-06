@@ -21,4 +21,4 @@ Try: `How do I cancel my subscription?` or `What is your refund window?`
 
 ## Prerequisites
 
-- .NET 9 SDK, Ollama with `nomic-embed-text` and `phi4-mini`.
+- .NET 10 SDK, Ollama with `nomic-embed-text` and `phi4-mini`.

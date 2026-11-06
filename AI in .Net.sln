@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LlmAsJudge", "samples\ch06-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutputGuardChatClient", "samples\ch06-production\output-guard-chat-client\OutputGuardChatClient.csproj", "{DE637C1F-BC3F-48C6-A70E-2A68EDA72E48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckpointingApproval", "samples\ch04-agent-framework\04.6.6-checkpointing-approval\CheckpointingApproval.csproj", "{5220F7B6-B9E0-4D49-8E17-1744A657D93C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -537,6 +539,18 @@ Global
 		{DE637C1F-BC3F-48C6-A70E-2A68EDA72E48}.Release|x64.Build.0 = Release|Any CPU
 		{DE637C1F-BC3F-48C6-A70E-2A68EDA72E48}.Release|x86.ActiveCfg = Release|Any CPU
 		{DE637C1F-BC3F-48C6-A70E-2A68EDA72E48}.Release|x86.Build.0 = Release|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Debug|x64.Build.0 = Debug|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Debug|x86.Build.0 = Debug|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Release|x64.ActiveCfg = Release|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Release|x64.Build.0 = Release|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Release|x86.ActiveCfg = Release|Any CPU
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -581,5 +595,6 @@ Global
 		{A383C5FE-9881-4B7E-98D5-F1D107BEC206} = {56D7CE51-9CF3-8BB1-8F1D-3172C3330966}
 		{E750304E-4AC3-471A-A5A5-8CF7B9D0CDCC} = {56D7CE51-9CF3-8BB1-8F1D-3172C3330966}
 		{DE637C1F-BC3F-48C6-A70E-2A68EDA72E48} = {56D7CE51-9CF3-8BB1-8F1D-3172C3330966}
+		{5220F7B6-B9E0-4D49-8E17-1744A657D93C} = {56D7CE51-9CF3-8BB1-8F1D-3172C3330966}
 	EndGlobalSection
 EndGlobal
